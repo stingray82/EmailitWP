@@ -3,7 +3,7 @@
  * Plugin Name:       EmailIt Interface
  * Plugin URI:        https://github.com/stingray82/
  * Description:       Interface for configuring EmailIt SMTP settings.
- * Version:           1.2.1
+ * Version:           1.2.2
  * Author:            Stingray82
  * Author URI:        https://github.com/stingray82/
  * License:           GPL-2.0+
@@ -29,18 +29,22 @@ function emailit_register_settings() {
 add_action( 'admin_init', 'emailit_register_settings' );
 
 /**
- * Add a settings page under Tools.
+ * Add a settings page under Tools if rup_emailit_hide is not defined.
  */
-function emailit_menu() {
-    add_management_page(
-        'EmailIt Settings',
-        'EmailIt Settings',
-        'manage_options',
-        'emailit-settings',
-        'emailit_settings_page'
-    );
-}
-add_action( 'admin_menu', 'emailit_menu' );
+add_action( 'plugins_loaded', function() {
+    if ( ! defined( 'rup_emailit_hide' ) ) {
+        function emailit_menu() {
+            add_management_page(
+                'EmailIt Settings',
+                'EmailIt Settings',
+                'manage_options',
+                'emailit-settings',
+                'emailit_settings_page'
+            );
+        }
+        add_action( 'admin_menu', 'emailit_menu', 20);
+    }
+});
 
 /**
  * Render the settings page.
