@@ -3,7 +3,7 @@
  * Plugin Name:       EmailItWP
  * Plugin URI:        https://github.com/stingray82/
  * Description:       Interface for configuring EmailIt API & SMTP settings for email delivery
- * Version:           1.3
+ * Version:           1.31
  * Author:            Stingray82
  * Author URI:        https://github.com/stingray82/
  * License:           GPL-2.0+
@@ -12,7 +12,7 @@
  * Domain Path:       /languages
  */
 
-define( 'EMAILITWP_VERSION', '1.3');
+define( 'EMAILITWP_VERSION', '1.31');
 define( 'EMAILIT_DEFAULT_FROM_NAME', '' );
 define( 'EMAILIT_DEFAULT_FROM_EMAIL', '' );
 define( 'EMAILIT_SMTP_HOST', 'smtp.emailit.com' );
