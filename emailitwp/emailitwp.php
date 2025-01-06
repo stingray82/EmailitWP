@@ -12,6 +12,7 @@
  * Domain Path:       /languages
  */
 
+define( 'EMAILITWP_VERSION', '1.3');
 define( 'EMAILIT_DEFAULT_FROM_NAME', '' );
 define( 'EMAILIT_DEFAULT_FROM_EMAIL', '' );
 define( 'EMAILIT_SMTP_HOST', 'smtp.emailit.com' );
