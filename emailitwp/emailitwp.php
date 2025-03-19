@@ -1,16 +1,19 @@
 <?php
 /**
  * Plugin Name:       EmailItWP
- * Plugin URI:        https://github.com/stingray82/
+ * Tested up to:      6.7.2
  * Description:       Interface for configuring EmailIt API & SMTP settings for email delivery
+ * Requires at least: 6.5
+ * Requires PHP:      7.4
  * Version:           1.31
  * Author:            Stingray82
  * Author URI:        https://github.com/stingray82/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       emailitwp
- * Domain Path:       /languages
- */
+ * Website:           https://reallyusefulplugins.com
+ * */
+
 
 define( 'EMAILITWP_VERSION', '1.31');
 define( 'EMAILIT_DEFAULT_FROM_NAME', '' );
