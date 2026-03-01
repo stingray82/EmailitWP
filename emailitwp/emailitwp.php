@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:       EmailItWP
- * Tested up to:      6.7.2
+ * Tested up to:      6.9.1
  * Description:       Interface for configuring EmailIt API & SMTP settings for email delivery
  * Requires at least: 6.5
  * Requires PHP:      7.4
- * Version:           1.31
+ * Version:           1.4
  * Author:            Stingray82
  * Author URI:        https://github.com/stingray82/
  * License:           GPL-2.0+
@@ -13,6 +13,7 @@
  * Text Domain:       emailitwp
  * Website:           https://reallyusefulplugins.com
  * */
+
 
 
 define( 'EMAILITWP_VERSION', '1.31');
@@ -297,7 +298,7 @@ function emailit_send_email( $phpmailer ) {
     } elseif ( $mode === 'API' ) {
         $apiKey = get_option( 'emailit_api_key' );
         $from   = get_option( 'emailit_from_name', EMAILIT_DEFAULT_FROM_NAME ) . ' <' . get_option( 'emailit_from_email', EMAILIT_DEFAULT_FROM_EMAIL ) . '>';
-        $url    = 'https://api.emailit.com/v1/emails';
+        $url    = 'https://api.emailit.com/v2/emails';
 
         $toAddresses = $phpmailer->getToAddresses();
         $subject     = $phpmailer->Subject;
